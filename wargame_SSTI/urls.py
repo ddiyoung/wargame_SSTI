@@ -21,7 +21,8 @@ from django.urls import path
 from SSTI import views
 
 urlpatterns = [
-    url('^$', views.IndexView.as_view(), name='index'),
+    url('^$', views.index, name='index'),
+    url('^Newsletter$', views.Newsletter, name='Newsletter'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

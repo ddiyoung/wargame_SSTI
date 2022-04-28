@@ -1,12 +1,20 @@
+import json
+
+from django.http import HttpResponse
 from django.shortcuts import render
 
+
 # Create your views here.
-from django.views import View
-
-
-class IndexView(View):
+def index(request):
     template_name = 'index.html'
 
-    def get(self, *args, **kwargs):
-        return render(self.request, template_name=self.template_name)
+    return render(request, template_name)
 
+
+def Newsletter(request):
+    email = request.POST['username']
+    user = request.user
+    template = "%s" % email
+    template = template.format(email=email, user=user)
+    template = "{'email' :'" + template + "'}"
+    return HttpResponse(json.dumps(template), content_type="application/json")
