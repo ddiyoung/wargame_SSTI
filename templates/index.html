@@ -555,7 +555,7 @@
                         <input type="email" class="form-control border-0" placeholder="Your Email" required="required" name="email" id="email"/>
                     </div>
                     <div>
-                        <button class="btn btn-lg btn-secondary btn-block border-0" onclick="fetchPage()" type="submit">Submit Now</button>
+                        <button class="btn btn-lg btn-secondary btn-block border-0" onclick="submit()" type="submit">Submit Now</button>
                     </div>
             </div>
         </div>
@@ -567,26 +567,10 @@
         </p>
     </div>
     <!-- Footer End -->
-
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 </body>
 
-<script>
-    function fetchPage(){
-        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-        fetch('./Newsletter', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': csrftoken,
-            },
-            body: JSON.stringify({
-                username: $('#username').val(),
-            })
-        }).then(response => response.json())
-    }
-</script>.val()
+<script src="/static/js/submit.js"></script>
 
 </html>

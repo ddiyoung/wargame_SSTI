@@ -12,7 +12,7 @@ def index(request):
 
 
 def Newsletter(request):
-    email = request.POST['username']
+    email = request.POST['email']
     user = request.user
     template = "%s" % email
     template = template.format(email=email, user=user)
