@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'bcq4y=4tc$me3o88m!2o)(t(x4(+-80k-+-c!0m-mk_$5a7)7f'
-SECRET_FLAG = 'SCTF{c0ff3e_is_7wos0me_co1d_br3w}'
+SECRET_FLAG = 'SJ{U_c4n_Inj3ct_t3mpl4t3_In_dj4ng0}'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
